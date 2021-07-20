@@ -1,0 +1,187 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home Page</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href={% static "css/main.css" %}/>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+		.con
+		{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			display:none;
+		}
+		#mainlogo {
+			transition: all .5s ease-in-out;
+		}
+
+		#mainlogo:hover {
+			transform: scale(1.1);
+		}
+		#codeType{
+			color: #46D8CA;
+		}
+		#gif1
+		{
+			display: none;
+			opacity: 0.8;
+			border-radius: 15px;
+			border: 0px solid #FFFFFF;
+			margin-top: 10px;
+		}
+		#gif2
+		{
+			display: none;
+			opacity: 0.8;
+			border-radius: 15px;
+			border: 0px solid #FFFFFF;
+			margin-top: 10px;
+		}
+		#gif3
+		{
+			display: none;
+			opacity: 0.8;
+			border-radius: 15px;
+			border: 0px solid #FFFFFF;
+			margin-top: 10px;
+		}
+		</style>
+		<script>
+		$(document).ready(function(){
+		var base2 = "{% static 'images/code.gif' %}";
+		var base1 = "{% static 'images/WebTools.gif' %}";
+		var base3 = "{% static 'images/cyberSec.gif' %}";
+		$(function() {
+			$('#gifDiv2').hover(function() {
+			$('#gif2').fadeIn("slow");
+			$('#gif2').attr("src", base2);
+		}, function() { 
+			$('#gif2').fadeOut();
+			});
+			});
+		$(function() {
+			$('#gifDiv1').hover(function() {
+			$('#gif1').fadeIn("slow");
+			$('#gif1').attr("src", base1);
+		}, function() { 
+			$('#gif1').fadeOut();
+			});
+			});
+		$(function() {
+			$('#gifDiv3').hover(function() {
+			$('#gif3').fadeIn("slow");
+			$('#gif3').attr("src", base3);
+		}, function() { 
+			$('#gif3').fadeOut();
+			});
+			});
+		$(function() {
+			$('#round1').hover(function() {
+			$('#round1 .con').fadeIn();
+			$('#img1').css("opacity", "0.4");
+		}, function() { 
+			$('#round1 .con').fadeOut();
+			$('#img1').css("opacity", "1");
+			});
+			});
+		$(function() {
+			$('#round2').hover(function() {
+			$('#round2 .con').fadeIn();
+			$('#img2').css("opacity", "0.4");
+		}, function() { 
+			$('#round2 .con').fadeOut();
+			$('#img2').css("opacity", "1");
+			});
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="logo"><strong>Small Developers LLC.</strong></a>
+					<nav id="nav">
+						<a href="#">Home</a>
+						<a href="">Downloads</a>
+						<a href="#">FAQs</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+			<section id="banner">
+				<div class="inner">
+				<img src={% static "images/logo.png" %} id ="mainlogo" alt="Pic 01" height="200px" width="200px"/>
+					<header>
+						<h1>Small Developers LLC</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div id="gifDiv1">
+							<i class="icon fa-database"></i>
+							<h3>Web Tools</h3>
+							<img src={% static "images/WebTools.gif" %} id="gif1" height="100px" width="200px"/>
+						</div>
+						
+						<div id="gifDiv2">
+							<i class="icon fa-code"></i>
+							<h3>Software Development</h3>
+							<img src={% static "images/code.gif" %} id="gif2" height="100px" width="200px"/>
+						</div>
+						<div id="gifDiv3">
+							<i class="icon fa-unlock-alt"></i>
+							<h3>Cyber Security</h3>
+							<img src={% static "images/cyberSec.gif" %} id="gif3" height="100px" width="200px"/>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+						
+							<div class="image round" id="round1">
+								<img src="https://res.cloudinary.com/teepublic/image/private/s--v2JODg9W--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1520050660/production/designs/2416585_0.jpg" id="img1" alt="Pic 01" />
+								<div class="con">
+								<h3>Python Projects</h3>
+								<a href="#" class="button">Learn More</a>
+								</div>
+							</div>
+						</article>
+						<article>
+							<div class="image round" id="round2">
+								<img src="https://res.cloudinary.com/teepublic/image/private/s--yBCKCqYh--/t_Preview/b_rgb:262c3a,c_limit,f_jpg,h_630,q_90,w_630/v1526688694/production/designs/2701817_0.jpg" id="img2" alt="Pic 01" />
+								<div class="con">
+								<h3>C++ Projects</h3>
+								<a href="#" class="button">Learn More</a>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			
+
+		<!-- Scripts -->
+			<script src={% static "js/jquery.min.js"%}></script>
+			<script src={% static "js/skel.min.js"%}></script>
+			<script src={% static "js/util.js"%}></script>
+			<script src={% static "js/main.js"%}></script>
+
+	</body>
+</html>

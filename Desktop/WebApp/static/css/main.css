@@ -1,0 +1,111 @@
+#ConnectBox{
+	display: none;
+}
+#hostBox{
+	display: none;
+}
+body {
+	background-image: url("../../images/background.jpg");
+}
+.dropzone {
+  background-color: lightgreen;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.redzone {
+  background-color: red;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.drop-target {
+	opacity: 0.5;
+}
+#cont{
+	text-align: center;
+	display: none;
+}
+#shuffle{
+
+	display: inline-block;
+	postion: absolute;
+}
+#board {
+ background-repeat: no-repeat;
+ -webkit-touch-action: none;
+ -khtml-touch-action: none;
+ -moz-touch-action: none;
+ -o-touch-action: none;
+ touch-action: none;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+	user-select: none;
+	display: inline-block;
+	position: relative;
+ /*transform: rotate(90deg);*/
+}
+.button {
+	background-color:transparent;
+	margin: 10px;
+	border-radius:8px;
+	border:6px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color: #84bbf3;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:15px 35px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528ecc;
+}
+.button:hover {
+	background-color:#84bbf3;
+	color: white;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+#startMenu
+{
+  border-radius:25px;
+  margin: 10px;
+  padding:100px 100px;
+	border:6px solid white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*display: none;*/
+}
+.yes-drop{
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+	user-select: none;
+	display: inline-block;
+	position: absolute;
+}
+.no-drop{
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+	user-select: none;
+	display: inline-block;
+	position: absolute;
+	transition: transform 1.0s;
+}
+.blue{
+	right:0;
+	top:0;
+}	
+.red
+{
+	left:0;
+	top:0;
+}

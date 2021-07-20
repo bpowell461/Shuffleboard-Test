@@ -1,0 +1,123 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Shuffleboard</title>
+<link rel="stylesheet" href={% static "css/main.css" %}/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+<script src={% static "js/interactjs/dist/interact.js" %}></script>
+<script type="text/javascript" src={% static "js/main.js" %}></script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+<div id="startMenu">
+<div id="ConnectBox">
+<h2 id="connName" style="color: white; font-size:28px;"> </h2>
+<h2 style="color: white; font-size:28px;">Game ID:</h2><input id="idBox" type="text" name='idBox' style="height: 50px; width: 300px; font-size: 28px;"><br>
+<button  class="button" onclick="connectGame()">Connect</button>
+</div>
+<div id="hostBox">
+<h2 id="hostID" style="color: white;top: 0; left: 5px;">Your ID: </h2>
+<h2 id="playerConn" style="color: white;top: 0; left: 5px;">Waiting for players to connect... </h2>
+</div>
+<div id="main">
+<h2 id="peerID" style="position: absolute; color: white;top: 0; left: 5px;">Your ID: </h2>
+<h2 id="nickname" style="position: absolute; color: white;bottom: 0; left: 5px;">Name: Anonymous</h2>
+<button  class="button" onclick="displayConnect()">Find a Game</button>
+<button  class="button" onclick="hostGame()">Host a Game</button>
+
+<div id="setName">
+<h2 style="color: white; font-size:28px;">Name:</h2><input id="nameBox" type="text" name='nameBox' style="height: 50px; width: 300px; font-size: 28px;"><br>
+<button  class="button" onclick="setNickname()">Set Nickname</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="cont">
+<div id ="left" style = "float:left; width: 25%;">
+<h2 id="redName" style="float:left; color: white; font-size:28px;">Game ID:</h2><h2 id="redScore" style="color: white; font-size:28px;">0</h2>
+</div>
+<div id = "middle" style = "float:left; width: 50%;">
+<button  class="button" onclick="userScore()">Score</button>
+</div>
+<div>
+<div id = "right" style = "float:left; width: 25%;">
+<h2 id="blueName" style="float:left; color: white; font-size:28px;">Game ID:</h2><h2 id="blueScore" style="color: white; font-size:28px;">0</h2>
+</div>
+<div>
+<div id="board">
+<div id="shuffle"><img src={% static "images/BoardArea.jpg" %}/></div>
+<div class="dropzone" id="1" style="
+    position: absolute;
+    height: 880px;
+    width: 580px;
+    bottom: 140px;
+    left: 118px;"
+></div>
+<div class="dropzone" id="2" style="
+    position: absolute;
+    height: 280px;
+    width: 580px;
+    top: 482px;
+    left: 118px;"
+></div>
+<div class="dropzone" id="3" style="
+    position: absolute;
+    height: 222px;
+    width: 580px;
+    top: 245px;
+    left: 118px;"
+></div>
+<div class="redzone" style="
+
+    position: absolute;
+    height: 100%;
+    width: 116px;
+    top: 0px;
+    left: 0px;"
+
+></div>
+<div class="redzone" style="
+
+    position: absolute;
+    height: 248px;
+    width: 100%;
+    top: 0px;
+    left: 0px;"
+></div>
+<div class="redzone" style="
+    position: absolute;
+    height: 100%;
+    width: 116px;
+    top: 0px;
+    right: 10px;"
+></div>
+<div id="blue1" class="no-drop blue"><img src = {% static "images/bluepuck.png" %} height="150px" width="150px"/></div>
+<div id="red1" class="yes-drop drag-drop red"><img src = {% static "images/redpuck.png" %} height="150px" width="150px"/></div>
+<div id="blue2" class="no-drop blue"><img src = {% static "images/bluepuck.png" %} height="150px" width="150px"/></div>
+<div id="red2" class="yes-drop drag-drop red"><img src = {% static "images/redpuck.png" %} height="150px" width="150px"/></div>
+<div id="blue3" class="no-drop blue"><img src = {% static "images/bluepuck.png" %} height="150px" width="150px"/></div>
+<div id="red3" class="yes-drop drag-drop red"><img src = {% static "images/redpuck.png" %} height="150px" width="150px"/></div>
+</div>
+</div>
+</div>
+</body>
+</html>
